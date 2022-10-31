@@ -23,21 +23,15 @@
         "version": "1.0.0",
         "plugins": [
             {
-                "name":"notaryv2",
-                "artifactTypes" : "application/vnd.cncf.notary.v2.signature"
-            },
-            {
-                "name":"sbom",
-                "artifactTypes":"org.example.sbom.v0",
-                "nestedReferences": "application/vnd.cncf.notary.v2.signature"
-            },
-            {
-                "name": "licensechecker",
-                "artifactTypes": "application/vnd.ratify.spdx.v0",
-                "allowedLicenses": ["MIT"]
+                "name": "packagechecker",
+                "artifactTypes": "application/spdx+json",
+                "disAllowedPackages": [
+                    {
+                        "name": "openssl",
+                        "version": "3.0.5-r3"
+                    }
+                ]
             }
-            
         ]
-        
     }
 }

@@ -32,6 +32,7 @@ build-plugins:
 	go build -o ./bin/plugins/ ./plugins/verifier/licensechecker
 	go build -o ./bin/plugins/ ./plugins/verifier/sample
 	go build -o ./bin/plugins/ ./plugins/verifier/sbom
+	go build -o ./bin/plugins/ ./plugins/verifier/packagechecker
 
 .PHONY: install
 install: 
